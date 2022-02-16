@@ -36,11 +36,7 @@
   transition: var(--main-transition);
 }
 
-@media (max-width: 991px) {
-  .explore::before {
-    display: none;
-  }
-}
+²
 .explore:hover::before {
   width: 450px;
   height: 450px;
