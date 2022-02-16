@@ -1,0 +1,48 @@
+.aside {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 999;
+  min-width: 0px;
+  width: 0;
+  margin-left: auto;
+  backdrop-filter: blur(30px);
+  padding: 3rem 1rem;
+  transition: 0.3s;
+}
+
+span {
+  color: var(--white);
+  font-weight: bold;
+}
+.btn {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
+.btn:focus {
+  outline: none;
+}
+.show {
+  min-width: 300px;
+  width: 65%;
+}
+.icon {
+  width: 19px;
+  height: 19px;
+  color: var(--white);
+}
+
+.links a {
+  text-decoration: none;
+  color: White;
+  padding: 1rem 0.5rem;
+  display: block;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.links a:hover {
+  margin-left: 20px;
+}

@@ -1,0 +1,47 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore {
+  width: 274px;
+  height: 274px;
+  font-size: 56px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .explore {
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+  }
+}
+
+.explore::before {
+  content: " ";
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
+
+@media (max-width: 991px) {
+  .explore::before {
+    display: none;
+  }
+}
+.explore:hover::before {
+  width: 450px;
+  height: 450px;
+}

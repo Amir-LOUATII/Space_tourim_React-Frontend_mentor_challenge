@@ -1,0 +1,54 @@
+.main {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+
+  min-height: 100vh;
+  background-size: cover;
+  padding-top: 120px;
+}
+
+@media (max-width: 991px) {
+  .main {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  max-height: 100%;
+}
+
+@media (max-width: 991px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .content {
+    flex-direction: column-reverse;
+
+    padding-top: 30px;
+  }
+}
+
+.col {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .col {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+}

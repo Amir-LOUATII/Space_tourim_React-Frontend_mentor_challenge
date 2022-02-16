@@ -1,0 +1,44 @@
+.img-container {
+  width: 600px;
+  min-height: 800px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  overflow: hidden;
+}
+
+.img {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 0;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.active {
+  opacity: 1;
+  right: 0;
+}
+
+@media (max-width: 1199px) {
+  .img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  .img-container {
+    display: none;
+  }
+}
+
+.last {
+  opacity: 0;
+  right: 100%;
+}
+
+.next {
+  opacity: 0;
+  right: -100%;
+}

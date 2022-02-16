@@ -1,0 +1,136 @@
+.desc {
+  margin: 10px auto;
+}
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 991px) {
+  .tabs {
+    justify-content: center;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary-color);
+  font-family: "Barlow Condensed", sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: var(--main-transition);
+}
+.btn:hover::before {
+  width: 80%;
+}
+
+.btn.active {
+  color: var(--white);
+}
+.btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background-color: var(--white);
+}
+.title {
+  font-size: 100px;
+  font-family: "bellefair", "serif";
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.section {
+  width: 100%;
+  min-height: 472px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.activeSilde {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 2s;
+  opacity: 0.5;
+}
+@media (max-width: 991px) {
+  .activeSilde {
+    text-align: center;
+  }
+}
+
+.nextSlide {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.description {
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  line-height: 2;
+}
+
+.info {
+  margin-top: 30px;
+  border-top: 1px solid var(--secondary-color);
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  align-items: center;
+  min-height: 90px;
+}
+
+@media (max-width: 576px) {
+  .info {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+.span {
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--secondary-color);
+  font-weight: normal;
+  font-size: 14px;
+}
+.span,
+.value {
+  display: block;
+  margin: 10px 0;
+}
+
+.value {
+  font-size: 28px;
+  font-weight: normal;
+}
