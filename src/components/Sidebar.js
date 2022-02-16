@@ -37,8 +37,8 @@ const Sidebar = () => {
               </li>
 
               <li>
-                <Link to="/technologie" onClick={closeSidebar}>
-                  <span>03</span> Technologie
+                <Link to="/technology" onClick={closeSidebar}>
+                  <span>03</span> Technology
                 </Link>
               </li>
             </ul>
