@@ -36,7 +36,6 @@
   transition: var(--main-transition);
 }
 
-²
 .explore:hover::before {
   width: 450px;
   height: 450px;

@@ -5,6 +5,7 @@ import Loading from "../UI/Loading";
 import Hero from "../components/Hero";
 import Image from "../components/destination/Image";
 import Description from "../components/destination/Description";
+import Error from "../UI/Error";
 
 const Destination = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,7 +21,7 @@ const Destination = () => {
     return (
       <main className={classes.main}>
         <Hero title={" pick your destination"} index={1} />
-        <h1>{isError.errorMsg}</h1>
+        <Error message={isError.errorMsg} />
       </main>
     );
   return (

@@ -1,0 +1,28 @@
+.section {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  text-align: flex-start;
+  flex-direction: column;
+}
+.error {
+  font-size: 30px;
+  color: white;
+}
+.btn {
+  text-decoration: none;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem 1rem;
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.btn:hover {
+  color: var(--white);
+  border-color: var(--white);
+}

@@ -11,7 +11,7 @@ const useFetch = (name) => {
       .get()
       .then((data) => {
         if (data.empty) {
-          setIsError({ error: true, errorMsg: "no data found" });
+          setIsError({ error: true, errorMsg: "Oops! No data found" });
           setIsLoading(false);
         } else {
           let result = [];
