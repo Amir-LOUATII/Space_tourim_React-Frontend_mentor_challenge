@@ -3,7 +3,8 @@
 
   min-height: 100vh;
   background-size: cover;
-  padding-top: 120px;
+  padding-top: 90px;
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
