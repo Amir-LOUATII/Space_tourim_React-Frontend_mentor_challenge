@@ -5,23 +5,24 @@ const useFetch = (name) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState([]);
-  const fetchData = (name) => {
-    projectFirestore
-      .collection(name)
-      .get()
-      .then((data) => {
-        if (data.empty) {
-          setIsError({ error: true, errorMsg: "Oops! No data found" });
-          setIsLoading(false);
-        } else {
-          let result = [];
-          data.docs.forEach((doc) => {
-            result.push({ id: doc.id, ...doc.data() });
-          });
-          setData(result);
-          setIsLoading(false);
-        }
+  const fetchData = async (name) => {
+    try {
+      const data = await projectFirestore.collection(name).get();
+      if (data.docs) {
+        setIsError({ error: true, errorMsg: "Oops! No data found" });
+        setIsLoading(false);
+        return;
+      }
+
+      let result = [];
+      data.docs.forEach((doc) => {
+        result.push({ id: doc.id, ...doc.data() });
       });
+      setData(result);
+      setIsLoading(false);
+    } catch (error) {
+      setIsError({ error: true, errorMsg: "Something want wrong" });
+    }
   };
 
   useEffect(() => {
