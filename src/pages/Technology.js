@@ -21,7 +21,6 @@ const Technology = () => {
         }
         return newIndex;
       });
-      console.log(activeIndex);
     }, 4000);
 
     return () => {
