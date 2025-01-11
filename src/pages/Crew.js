@@ -5,10 +5,18 @@ import Loading from "../UI/Loading";
 import classes from "./crew.module.css";
 import CrewDescription from "../components/crew/CrewDescription";
 import CrewImage from "../components/crew/CrewImage";
-
+import CrewBgDesktop from "../assets/crew/background-crew-desktop.jpg";
+import CrewBgTablet from "../assets/crew/background-crew-tablet.jpg";
+import CrewBgMobile from "../assets/crew/background-crew-mobile.jpg";
+import usePreloadImages from "../hooks/usePreloadImages";
+import LoadingPage from "./LoadingPage";
 const Crew = () => {
   const { isLoading, isError, data } = useFetch("crew");
   const [activeIndex, setActiveIndex] = useState(0);
+  const imageUrls = [CrewBgDesktop, CrewBgTablet, CrewBgMobile];
+
+  const { allLoaded } = usePreloadImages(imageUrls);
+
   useEffect(() => {
     let counter = setInterval(() => {
       setActiveIndex((prevIndex) => {
@@ -26,6 +34,7 @@ const Crew = () => {
     };
   }, [activeIndex]);
 
+  if (!allLoaded) return <LoadingPage />;
   if (isLoading) {
     return (
       <main className={classes.main}>
