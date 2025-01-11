@@ -3,6 +3,8 @@
 
   min-height: 100vh;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   padding-top: 90px;
   overflow: hidden;
 }
