@@ -50,3 +50,24 @@ ul {
   --secondary-color: #d0d6f9;
   --main-transition: 0.3s;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #80b3d4;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #01579b;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #003f7f;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #01579b;
+}
