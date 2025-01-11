@@ -6,12 +6,14 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import { lazy, Suspense } from "react";
 import LoadingPage from "./pages/LoadingPage";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./pages/ErrorFallback";
 const Crew = lazy(() => import("./pages/Crew"));
 const Destination = lazy(() => import("./pages/Destination"));
 const Technology = lazy(() => import("./pages/Technology"));
 function App() {
   return (
-    <>
+    <ErrorBoundary fallback={ErrorFallback}>
       <Navbar />
       <Sidebar />
       <Routes>
@@ -43,7 +45,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </>
+    </ErrorBoundary>
   );
 }
 

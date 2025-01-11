@@ -1,0 +1,55 @@
+.errorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0b1120; /* Dark blue background color */
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #d1d5db; /* Light gray text */
+  margin-bottom: 10px;
+}
+
+.errorDetails {
+  font-size: 1rem;
+  color: #f87171; /* Red text for error details */
+  background-color: #1f2937; /* Dark background for error block */
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%;
+  margin: 0 auto 20px auto;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2563eb; /* Blue button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
