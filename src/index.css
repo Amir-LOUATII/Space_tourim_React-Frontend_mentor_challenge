@@ -1,8 +1,12 @@
 body {
   margin: 0;
   font-family: "Bellefair", "serif";
+  min-height: 100vh;
 }
-
+#root {
+  height: 100%;
+  width: 100%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

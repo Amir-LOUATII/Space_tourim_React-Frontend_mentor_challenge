@@ -8,7 +8,7 @@ const useFetch = (name) => {
   const fetchData = async (name) => {
     try {
       const data = await projectFirestore.collection(name).get();
-      if (data.docs) {
+      if (data?.empty) {
         setIsError({ error: true, errorMsg: "Oops! No data found" });
         setIsLoading(false);
         return;
