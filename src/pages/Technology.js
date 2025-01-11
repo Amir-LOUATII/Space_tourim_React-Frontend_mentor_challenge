@@ -38,7 +38,7 @@ const Technology = () => {
     return (
       <main className={classes.main}>
         <Hero title={" SPACE LAUNCH 101"} index={3} />
-        <h1>{isError.errorMsg}</h1>
+        <h1>{isError?.errorMsg}</h1>
       </main>
     );
   return (
