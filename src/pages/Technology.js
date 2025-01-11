@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import classes from "./technology.module.css";
+import classes from "./Technology.module.css";
 import useFetch from "../hooks/useFetch";
 import Hero from "../components/Hero";
 import Loading from "../UI/Loading";
